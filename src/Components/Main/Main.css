@@ -1,0 +1,228 @@
+.main {
+    font-family: 'Poppins';
+    margin-top: 36px;
+    min-height: 485px;
+    z-index: 5;
+}
+
+.main__title {
+    margin: 0;
+    text-align: center;
+    padding: 0 26px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 104%;
+    text-transform: uppercase;
+    color: #162C4E;
+    letter-spacing: 1.1px;
+    opacity: 0.39;
+}
+
+.main__description {
+    margin: 0;
+    padding: 15px 25px 0;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.timer {
+    max-width: 360px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 25px 0;
+    box-sizing: border-box;
+}
+
+.timer__time {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    row-gap: 6px;
+}
+
+.timer__time_value {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    color: #162C4E;
+    text-align: center;
+}
+
+.timer__time_separator {
+    position: absolute;
+    right: -12px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    color: #162C4E;
+}
+
+.timer__time_description {
+    width: 64px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+
+.timer__time_description_small {
+    display: flex;
+}
+
+.timer__time_description::before {
+    content: '';
+    background: url(../../images/date_background.svg);
+    position: absolute;
+    width: 64px;
+    height: 40px;
+    z-index: -1;
+}
+
+.event {
+    font-family: 'Poppins';
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 41px;
+    row-gap: 14px;
+}
+
+.event__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.8);
+    padding-left: 18px;
+}
+
+.event__link {
+    width: 240px;
+    height: 60px;
+    background: #1D4169;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 30px;
+    letter-spacing: .8px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        margin-top: 74px;
+        min-height: 537px;
+    }
+
+    .main__description {
+        max-width: 315px;
+        margin: auto;
+        padding: 20px 20px 0;
+    }
+
+    .timer {
+        max-width: 407px;
+        margin: auto;
+        padding-top: 42px;
+    }
+
+    .timer__time_separator {
+        right: -21px;
+    }
+
+    .event__description {
+        padding-left: 0;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    .main {
+        margin-top: 88px;
+        height: 100vh;
+    }
+
+    .main__title {
+        font-size: 72px;
+        line-height: 104%;
+        letter-spacing: 1.7px;
+
+    }
+
+    .main__description {
+        font-weight: 400;
+        font-size: 18px;
+        max-width: 430px;
+        padding-top: 10px;
+    }
+
+    .timer {
+        max-width: 640px;
+        padding-top: 32px;
+    }
+
+    .timer__time_value,
+    .timer__time_separator {
+        font-size: 72px;
+        line-height: 100%;
+    }
+
+    .timer__time {
+        row-gap: 3px;
+    }
+
+    .timer__time_description {
+        width: 134px;
+        height: 53px;
+    }
+
+    .timer__time_description::before {
+        content: '';
+        background: url(../../images/date_background.svg);
+        position: absolute;
+        width: 89px;
+        height: 40px;
+        transform: scale(2.07, 1.4);
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .event__description {
+        margin-top: 31px;
+        font-size: 18px;
+        line-height: 150%;
+    }
+
+    .timer__time_description {
+        display: flex;
+    }
+
+    .timer__time_description_small {
+        display: none;
+    }
+}
